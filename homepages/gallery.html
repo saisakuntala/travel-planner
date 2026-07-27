@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <title>Travel Planner</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="stylesheet" href="style1.css">
+        <style>
+          
+
+
+.sub-body{
+    
+    margin-top: 5%;
+    height: 90%;
+    width: 100%;
+}
+.sub-body h1{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+
+    margin-top: 5%;
+    padding: 10px;
+    
+}
+.gallery {
+            margin: 5% 3% 0% 3%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+            grid-gap: 20px;
+            
+        }
+
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.2s; 
+            margin-bottom: 7%;
+            
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03); 
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 88%;
+            max-height: 88%;
+            display: block; 
+        }
+
+        .caption {
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7); 
+            color: white;
+            text-align: center;
+            position: relative;
+            bottom: 0px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 0.9em;
+        }
+        
+    
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div id="menu-bar" class="fas fa-bars"></div>
+            <a href="../home.html" class="logo"><span>TRAVEL </span>Planner</a>
+            <nav class="navbar">
+                <a href="../home.html">Home</a>
+                <a href="book.html">Book</a>
+                <a href="./gallery.html">Gallery</a>
+                <a href="packages.html">Packages</a>
+            </nav> 
+            <div class="icons">
+                <a href="../index.html"><i class="fas fa-user" id="logout-btn"> Log out</i></a>
+                
+            </div>          
+        </header>
+        
+            <div class="sub-body">
+                <h1>Our Gallery</h1>
+                <div class="gallery">
+
+                    <div class="gallery-item">
+                        <img src="./gallery/taj.jpg" alt="Loading">
+                        <div class="caption">Taj Mahal,Agra</div>
+                    </div>
+            
+                    <div class="gallery-item">
+                        <img src="./gallery/red-fort.jpg" alt="Loading">
+                        <div class="caption">Red Fort,Delhi</div>
+                    </div>
+            
+                    <div class="gallery-item">
+                        <img src="./gallery/gateway.jpg" alt="Loading">
+                        <div class="caption">Gateway Of India,Mumbai</div>
+                    </div>
+            
+                    <div class="gallery-item">
+                        <img src="./gallery/budha.jpg" alt="Loading">
+                        <div class="caption">Ravangla Buddha Park,Sikkim</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./gallery/lotus.jpg" alt="Loading">
+                        <div class="caption">Lotus Temple,New Delhi</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./gallery/jatayu.jpg" alt="Loading">
+                        <div class="caption">Jatayu Statue,Kerala</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./gallery/charminar.jpg" alt="Loading">
+                        <div class="caption">Charminar,Hyderabad</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./gallery/iskon.webp" alt="Loading">
+                        <div class="caption">Iskcon Temple,Banglore</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./gallery/chennai1 (1).jpg" alt="Loading">
+                        <div class="caption">Marina Beach,Chennai</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./gallery/arak (1).jpg" alt="Loading">
+                        <div class="caption">Araku Valley,Vizag</div>
+                    </div>
+                    </div>
+        
+        
+        <footer>
+            <p>&copy; 2025 Travel Planner. All rights reserved.</p>
+        </footer>
+
+        <script></script>
+    </body>
+    </html>

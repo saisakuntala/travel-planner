@@ -1,0 +1,251 @@
+<html>
+    <head>
+        <title>Jaipur Packages</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="stylesheet" href="../style.css">
+        <meta charset="UTF-8">
+        <style>
+            
+            main {
+                margin-top: 5%;
+            }
+            .container {
+                max-width: 600px;
+                margin: auto;
+                text-align: center;
+            }
+            h1 {
+                color: #2c3e50;
+            }
+            .box {
+                background-color: #2980b9;
+                color: white;
+                padding: 20px;
+                margin: 10px;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            .box:hover {
+                background-color: #3498db;
+            }
+            .info-box {
+                margin-top: 20px;
+                padding: 20px;
+                border: 1px solid #2980b9;
+                border-radius: 8px;
+                display: none; 
+                background-color: #ffffff;
+                color: #333;
+                text-align: left;
+            }
+            .info-box img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+                margin-top: 10px;
+            }
+            
+            .info-box h2 {
+                font-size: 24px; 
+                text-align: center;
+            }
+            .info-box p {
+                font-size: 18px; 
+                margin: 10px 0;
+            }
+            .info-box ol {
+                font-size: 16px; 
+                padding-left: 20px;
+            }
+
+            #back-button a {
+                background-color: #2980b9; 
+                color: white; 
+                padding: 10px 20px; 
+                border: none; 
+                border-radius: 5px; 
+                cursor: pointer; 
+                font-size: 16px; 
+                margin-top: 10px; 
+                display: inline-block; 
+                
+            }
+            
+       
+            .day-info {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+              
+            }
+            
+            .day-info-text {
+                flex: 1;
+                padding-right: 20px; 
+            }
+            .day-info-image {
+                flex: 0 0 40%; 
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="menu-bar" class="fas fa-bars"></div>
+            <a href="#" class="logo"><span>TRAVEL </span>Planner</a>
+            <nav class="navbar">
+                <a href="../home.html">Home</a>
+                <a href="../homepages/book.html">Book</a>
+                <a href="../homepages/gallery.html">Gallery</a>
+                <a href="../homepages/packages.html">Packages</a>
+            </nav> 
+            <div class="icons">
+                <a href="../index.html"><i class="fas fa-user" id="logout-btn"> Log out</i></a>
+            </div>          
+        </header>
+
+        <main>
+            <div class="container">
+                <h1>JAIPUR PACKAGE</h1>
+                <div class="box" data-info="Day 1: Amber Fort, Hawa Mahal, City Palace, Jawahar kala kendra.">
+                    Day 1
+                </div>
+                <div class="box" data-info="Day 2: Jantar Mantar, Nahargarh Fort, Albert Hall Museum,Night Tour.">
+                    Day 2
+                </div>
+                <div class="box" data-info="Day 3: Jal Mahal,Gaitore Ki Chhatriyan,Sisodia Rani Gardern,Traditional Puppet show.">
+                    Day 3
+                </div>
+                
+
+                <div id="info" class="info-box">
+                    <div id="day1-info" class="day-info" style="display: none;">
+                        <h2>Day 1 Details</h2>
+                        <p><b>The Heart of Jaipur</b></p>
+                        <div class="day-info">
+                            
+                            <div class="day-info-text">
+                                
+                               <br> <ol type="1">
+                                    <li style="margin-top: 1%;">Amber Fort: Amber Fort in Jaipur is famous for its architecture, history, and culture.</li>
+                                    <p style="color: red;">*₹100 per person</p>
+                                    <li style="margin-top: 18%;">Hawa Mahal: The Hawa Mahal in Jaipur is famous for its architecture, ventilation, and history.</li>
+                                    <p style="color: red;">*₹50 per person</p>
+                                    <li style="margin-top: 16%;">City Palace: The City Palace in Jaipur is famous for its architecture, art, and views of the city.</li>
+                                    <p style="color: red;">*₹300 per person (Museum)</p>
+                                    <li style="margin-top: 15%;">Jawahar kala kendra: Famous for showcasing and preserving Rajasthani arts and crafts.</li>
+                                    <p style="color: red;">*No entry fee</p>
+                                </ol>
+                            </div>
+                            <div class="day-info-image">
+                                <img src="./images/amber.jpg" alt="Amber Fort" style="width: 100%; border-radius: 8px;">
+                                <img src="./images/hawa.webp" alt="Hawa Mahal" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/citymahal.jpg" alt="City Palace" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/jawahar.jpg" alt="Jawahar kala kendra" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="day2-info" class="day-info" style="display: none;">
+                        <h2>Day 2 Details</h2>
+                        <p><b>Architectural Wonders</b></p>
+                        <div class="day-info">
+                            
+                            <div class="day-info-text">
+                                
+                               <br> <ol type="1">
+                                    <li style="margin-top: 1%;">Jantar Mantar: An astronomical observatory with a collection of instruments.</li>
+                                    <p style="color: red;">*₹50 per person</p>
+                                    <li style="margin-top: 20%;">Nahargarh Fort: Famous for its views, water harvesting system, and architecture. </li>
+                                    <p style="color: red;">*₹50 per person</p>
+                                    <li style="margin-top: 20%;">Albert Hall Museum: Famous for its architecture, art collection, and historical significance.</li>
+                                    <p style="color: red;">*₹40 per person</p>
+                                    <li style="margin-top: 30%;">Night Tour: Its stunning views of illuminated pink buildings, particularly the iconic Hawa Mahal (Palace of Winds).</li>
+                                    <p style="color: red;">*₹300 per person</p>
+                                </ol>
+                            </div>
+                            <div class="day-info-image">
+                                <img src="./images/jantar.jpg_cf-webp_w-450_h-240" alt="Jantar Mantar" style="width: 100%; border-radius: 8px;">
+                                <img src="./images/nahargarh.jpg" alt="Nahargarh Fort" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/albert.webp" alt="Albert Hall Museum" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/night walk'.jpg" alt="Night Tour" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="day3-info" class="day-info" style="display: none;">
+                        <h2>Day 3 Details</h2>
+                        <p><b>The Pink City Trail.</b></p>
+                        <div class="day-info">
+                            
+                            <div class="day-info-text">
+                                
+                               <br> <ol type="1">
+                                <br><li style="margin-top: 1%;">Jal Mahal: The Jal Mahal Palace is an architectural showcase of the Rajput style of architecture.</li>
+                                <p style="color: red;">*No entry fee</p>
+                                <li style="margin-top: 15%;">Gaitore Ki Chhatriyan: Known for its stunning architecture.</li>
+                                <p style="color: red;">*₹30 per person</p>
+                                <li style="margin-top: 30%;">Sisodia Rani Garden: Small Palace, Multi-layered, pavilions, shrines, murals, frescoes, paintings, and fountains.</li>
+                                <p style="color: red;">*₹50 per person</p>
+                                <li style="margin-top: 20%;">Traditional Puppet Show: The Magic of Puppetry.</li>
+                                <p style="color: red;">*₹750 to ₹1200 per person</p>
+                                </ol>
+                            </div>
+                            <div class="day-info-image">
+                                <img src="./images/jalmahal.jpg" alt="Jal Mahal" style="width: 100%; border-radius: 8px;">
+                                <img src="./images/gaitore.webp" alt="Gaitore Ki Chhatriyan" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/sisodia.webp" alt="Sisodia Rani Garden" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/puppet.avif" alt="Traditional Puppet Show" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                            </div>
+                        </div>
+                        
+                    </div>
+                  
+                    
+                </div>
+                <button id="back-button" style="display:none;"><a href="jaipur.html">Back</a></button><br><br>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Travel Planner. All rights reserved.</p>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const boxes = document.querySelectorAll('.box');
+                const infoBox = document.getElementById('info');
+                const backButton = document.getElementById('back-button');
+
+                boxes.forEach(box => {
+                    box.addEventListener('click', () => {
+                        // Hide all boxes
+                        boxes.forEach(b => {
+                            b.style.display = 'none';
+                        });
+
+                        // Show the information about the clicked box
+                        const day = box.textContent.trim();
+                        const dayInfo = document.getElementById(`day${day.split(' ')[1]}-info`);
+                        dayInfo.style.display = 'block'; // Show the specific day info
+                        infoBox.style.display = 'block'; // Show the info box
+                        backButton.style.display = 'block'; // Show the back button
+                    });
+                });
+
+                backButton.addEventListener('click', () => {
+                    // Hide the info box and show all boxes again
+                    infoBox.style.display = 'none';
+                    boxes.forEach(b => {
+                        b.style.display = 'block';
+                    });
+                    backButton.style.display = 'none'; // Hide the back button
+                    const dayInfos = document.querySelectorAll('.day-info');
+                    dayInfos.forEach(info => {
+                        info.style.display = 'none'; // Hide all day info
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

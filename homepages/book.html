@@ -1,0 +1,176 @@
+<html>
+    <head>
+        <title>Travel Planner</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="stylesheet" href="style1.css">
+        <style>
+            body {
+                background-color:  #f9f9f9; 
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 20px;
+            }
+
+            .container {
+                float: left;
+                width: 40%;
+                margin: 13% 5% 0% 5%;
+                background: white;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            label {
+                display: block;
+                margin: 10px 0 5px;
+            }
+
+            input {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            button {
+                width: 100%;
+                padding: 10px;
+                background-color: #28a745;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #218838;
+            }
+
+            .summary {
+                float: right;
+                width: 30%;
+                margin: 13% 10% 0% 10%;
+                background: white;
+                font-size: 15px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .summary h2, p {
+                display: flex;
+                justify-content: center;
+                padding: 10px;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            footer { 
+                width: 100%; 
+                text-align: center; 
+                padding: 10px 0; 
+                background-color: #333; 
+                color: white; 
+                position: fixed; 
+                bottom: 0; 
+                left: 0; 
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div id="menu-bar" class="fas fa-bars"></div>
+            <a href="../home.html" class="logo"><span>TRAVEL </span>Planner</a>
+            <nav class="navbar">
+                <a href="../home.html">Home</a>
+                <a href="book.html">Book</a>
+                <a href="./gallery.html">Gallery</a>
+                <a href="packages.html">Packages</a>
+            </nav> 
+            <div class="icons">
+                <a href="../index.html"><i class="fas fa-user" id="logout-btn"> Log out</i></a>
+            </div>          
+        </header>
+
+        <div class="container">
+            <h1>Booking</h1>
+            <form id="bookingForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" required>
+    
+                <label for="date">Travel Date:</label>
+                <input type="date" id="date" name="date" required>
+    
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" min="1" name="guests" required>
+    
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+
+        <div id="summary" class="summary hidden">
+            <h2>Booking Summary</h2>
+            <p id="summaryDetails"></p>
+            <button id="confirmButton">Confirm Booking</button>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Travel Planner. All rights reserved.</p>
+        </footer>
+
+        <script>
+            let bookingData = null;
+
+            document.getElementById('bookingForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                // Get form values
+                const name = document.getElementById('name').value;
+                const destination = document.getElementById('destination').value;
+                const date = document.getElementById('date').value;
+                const guests = document.getElementById('guests').value;
+
+                bookingData = { name, destination, date, guests };
+
+                // Create summary
+                const summaryDetails = `
+                    Name: ${name}<br>
+                    Destination: ${destination}<br>
+                    Travel Date: ${date}<br>
+                    Number of Guests: ${guests}
+                `;
+
+                // Display summary
+                document.getElementById('summaryDetails').innerHTML = summaryDetails;
+                document.getElementById('summary').classList.remove('hidden');
+            });
+
+            document.getElementById('confirmButton').addEventListener('click', function(event) {
+                event.preventDefault();
+                if (!bookingData) return;
+
+                // Save to localStorage
+                let bookings = localStorage.getItem('bookings');
+                bookings = bookings ? JSON.parse(bookings) : [];
+                bookings.push(bookingData);
+                localStorage.setItem('bookings', JSON.stringify(bookings));
+
+                // Show alert and redirect
+                alert("Your Booking is successful!");
+                window.location.href = "gallery.html";
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,167 @@
+<html>
+    <head>
+        <title>Travel Planner</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="stylesheet" href="../style.css">
+        <style>
+main {
+    padding: 20px;
+    margin-top: 4%;
+    
+}
+main h1{
+    color: 007bff;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 25px;
+
+}
+section{
+    margin-top: 3%;
+}
+section h2{
+    font-size: 20px;
+}
+section h3{
+    font-size: 16px;
+}
+
+.service-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.details {
+    background: #e9ecef;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="menu-bar" class="fas fa-bars"></div>
+            <a href="../index.html" class="logo"><span>TRAVEL </span>Planner</a>
+            <nav class="navbar">
+                <a href="../index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="icons">
+                <a href="../login.html"><i class="fas fa-user" id="login-btn"> Login</i></a>
+                <a href="../register.html"><i class="fas fa-user" id="login-btn"> Register</i></a>
+                         
+   
+            </div>
+           
+            
+            
+        </header>
+        <main>
+            <h1>Our Travel Planning Services</h1>
+            
+            <section id="services">
+                <h2>What We Offer</h2>
+                <div class="service-card" onclick="showDetails('service1')">
+                    <h3>Custom Itineraries</h3>
+                    <p>Personalized travel plans tailored to your preferences.</p>
+                </div>
+                <div class="service-card" onclick="showDetails('service2')">
+                    <h3>Accommodation Booking</h3>
+                    <p>Find the best hotels and lodgings for your stay.</p>
+                </div>
+                <div class="service-card" onclick="showDetails('service3')">
+                    <h3>Travel Insurance</h3>
+                    <p>Protect your trip with comprehensive travel insurance.</p>
+                </div>
+                <div class="service-card" onclick="showDetails('service4')">
+                    <h3>Local Guides</h3>
+                    <p>Connect with local experts for an authentic experience.</p>
+                </div>
+            </section>
+    
+            <section id="details" class="details">
+                <h2>Service Details</h2>
+                <p id="detail-text">Click on a service to see more details.</p>
+            </section>
+        </main>
+        
+       
+       
+        <footer>
+            <p>&copy; 2025 Travel Planner. All rights reserved.</p>
+        </footer>
+        
+       
+
+   
+
+        <script>
+             function showDetails(service) {
+    const detailText = document.getElementById('detail-text');
+    switch (service) {
+        case 'service1':
+            detailText.innerHTML = "Custom Itineraries: We create personalized travel plans based on your interests, budget, and schedule.";
+            break;
+        case 'service2':
+            detailText.innerHTML = "Accommodation Booking: We help you find and book the best hotels, hostels, or vacation rentals.";
+            break;
+        case 'service3':
+            detailText.innerHTML = "Travel Insurance: Our travel insurance options ensure you are covered for unexpected events.";
+            break;
+        case 'service4':
+            detailText.innerHTML = "Local Guides: Our local guides provide insights and tips to enhance your travel experience.";
+            break;
+        default:
+            detailText.innerHTML = "Click on a service to see more details.";
+    }
+}
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

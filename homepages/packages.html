@@ -1,0 +1,183 @@
+<html>
+    <head>
+        <title>Travel Planner</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="stylesheet" href="style1.css">
+        <meta charset="UTF-8">
+        <style>
+            main{
+                
+                margin-top: 5%;
+                height: 88%;
+            }
+            main h1{
+                display: flex;
+                font-size: 30px;
+                justify-content: center;
+            }
+            .package-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.package {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.package img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.price {
+    font-size: 1.5em;
+    color: #e67e22;
+}
+
+button {
+    background: #35424a;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+button:hover {
+    background: #e67e22;
+}
+            
+
+       </style>
+</head>
+
+<body>
+    <header>
+        <div id="menu-bar" class="fas fa-bars"></div>
+        <a href="../home.html" class="logo"><span>TRAVEL </span>Planner</a>
+        <nav class="navbar">
+            <a href="../home.html">Home</a>
+            <a href="book.html">Book</a>
+            <a href="./gallery.html">Gallery</a>
+            <a href="packages.html">Packages</a>
+        </nav> 
+        <div class="icons">
+            <a href="../index.html"><i class="fas fa-user" id="logout-btn"> Log out</i></a>
+            
+        </div>          
+    </header>
+
+    <main>
+        <h1>Travel Packages in India</h1>
+        <div class="package-container">
+            <div class="package">
+                <p class="price" style="font-size: 12px;"><b>*Prices may vary according to your location</b></p><br>
+                <img src="./gallery/goa.jpg" alt="Goa Beach">
+                <h2>GOA</h2>
+                <p class="price">Price: ₹25,000</p>
+                <p class="description">Enjoy a 5-day trip to the beautiful beaches of Goa, including accommodation and breakfast.</p>
+                <button onclick="goa()">View Details</button>
+                
+            </div>
+            <div class="package">
+                <p class="price" style="font-size: 12px;"><b>*Prices may vary according to your location</b></p><br>
+                <img src="./gallery/pink.jpg" alt="Jaipur City Tour">
+                <h2>JAIPUR</h2>
+                <p class="price">Price: ₹18,000</p>
+                <p class="description">Explore the Cultural and Historical with a 3-day guided tour, including visits to forts and palaces.</p>
+                <button onclick="jaipur()">View Details</button>
+
+            </div>
+            <div class="package">
+                <p class="price" style="font-size: 12px;"><b>*Prices may vary according to your location</b></p><br>
+                <img src="./gallery/kerala (1).jpg" alt="Kerala Backwaters">
+                <h2>KERALA</h2>
+                <p class="price">Price: ₹30,000</p>
+                <p class="description">Experience the serene backwaters of Kerala with 4-days stay.</p>
+                <button onclick="kerala()">View Details</button>
+                
+            </div>
+            <div class="package">
+                <p class="price" style="font-size: 12px;"><b>*Prices may vary according to your location</b></p><br>
+                <img src="./gallery/charminar.jpg" alt="charminar">
+                <h2>HYDERABAD</h2>
+                <p class="price">Price: ₹22,000</p>
+                <p class="description">Explore the Hyderabad which is known as the City of Pearls</p>
+                <button onclick="hyderabad()">View Details</button>
+
+            </div>
+            <div class="package">
+                <p class="price" style="font-size: 12px;"><b>*Prices may vary according to your location</b></p><br>
+                <img src="./gallery/bang (1).jpg" alt="iskcon temple">
+                <h2>BANGLORE</h2>
+                <p class="price">Price: ₹13,000</p>
+                <p class="description">Explore 4-days trip to Banglore </p>
+                <button onclick="banglore()">View Details</button>
+                
+            </div>
+            <div class="package">
+                <p class="price" style="font-size: 12px;"><b>*Prices may vary according to your location</b></p><br>
+                <img src="./gallery/arak (1).jpg" alt="araku valley">
+                <h2>ARAKU</h2>
+                <p class="price">Price: ₹5,000</p>
+                <p class="description">Explore 1-day trip of Araku Valley on hills</p>
+                <button onclick="showDetails('Araku Valley')">View Details</button>
+               
+            </div>
+            <div class="package">
+                <p class="price" style="font-size: 12px;"><b>*Prices may vary according to your location</b></p><br>
+                <img src="./gallery/chennai1 (1).jpg" alt="Marina Beach">
+                <h2>CHENNAI</h2>
+                <p class="price">Price: ₹10,000</p>
+                <p class="description">Marina beach in Chennai is India's longest and world's second longest beach</p>
+                <button onclick="showDetails('Marina Beach')">View Details</button>
+                
+            </div>
+            <div class="package">
+                <p class="price" style="font-size: 12px;"><b>*Prices may vary according to your location</b></p><br>
+                <img src="./gallery/taj.jpg" alt="Taj Mahal">
+                <h2>AGRA</h2>
+                <p class="price">Price: ₹32,000</p>
+                <p class="description">The Taj Mahal is an ivory-white marble mausoleum on the south bank of the Yamuna river in the Indian city of Agra</p>
+                <button onclick="showDetails('Taj Mahal')">View Details</button>
+                
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Travel Planner. All rights reserved.</p>
+    </footer>
+<script>
+     function goa() {
+    window.location.href = "../packages/goa.html";
+}
+function jaipur() {
+    window.location.href = "../packages/jaipur.html";
+}
+function kerala() {
+    window.location.href = "../packages/kerala.html";
+}
+function hyderabad() {
+    window.location.href = "../packages/hyderabad.html";
+}
+function banglore() {
+    window.location.href = "../packages/banglore.html";
+}
+    function showDetails(packageName) {
+    alert("More details about " + packageName + " will be available soon!");
+}
+</script>
+</body>
+</html>

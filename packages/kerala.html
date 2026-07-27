@@ -1,0 +1,278 @@
+<html>
+    <head>
+        <title>Kerala Packages</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="stylesheet" href="../style.css">
+        <meta charset="UTF-8">
+        <style>
+            
+            main {
+                margin-top: 5%;
+            }
+            .container {
+                max-width: 600px;
+                margin: auto;
+                text-align: center;
+            }
+            h1 {
+                color: #2c3e50;
+            }
+            .box {
+                background-color: #2980b9;
+                color: white;
+                padding: 20px;
+                margin: 10px;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            .box:hover {
+                background-color: #3498db;
+            }
+            .info-box {
+                margin-top: 20px;
+                padding: 20px;
+                border: 1px solid #2980b9;
+                border-radius: 8px;
+                display: none; 
+                background-color: #ffffff;
+                color: #333;
+                text-align: left;
+            }
+            .info-box img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+                margin-top: 10px;
+            }
+            
+            .info-box h2 {
+                font-size: 24px; 
+                text-align: center;
+            }
+            .info-box p {
+                font-size: 18px; 
+                margin: 10px 0;
+            }
+            .info-box ol {
+                font-size: 16px; 
+                padding-left: 20px;
+            }
+
+            #back-button a {
+                background-color: #2980b9; 
+                color: white; 
+                padding: 10px 20px; 
+                border: none; 
+                border-radius: 5px; 
+                cursor: pointer; 
+                font-size: 16px; 
+                margin-top: 10px; 
+                display: inline-block; 
+                
+            }
+            
+       
+            .day-info {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+              
+            }
+            
+            .day-info-text {
+                flex: 1;
+                padding-right: 20px; 
+            }
+            .day-info-image {
+                flex: 0 0 40%; 
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="menu-bar" class="fas fa-bars"></div>
+            <a href="#" class="logo"><span>TRAVEL </span>Planner</a>
+            <nav class="navbar">
+                <a href="../home.html">Home</a>
+                <a href="../homepages/book.html">Book</a>
+                <a href="../homepages/gallery.html">Gallery</a>
+                <a href="../homepages/packages.html">Packages</a>
+            </nav> 
+            <div class="icons">
+                <a href="../index.html"><i class="fas fa-user" id="logout-btn"> Log out</i></a>
+            </div>          
+        </header>
+
+        <main>
+            <div class="container">
+                <h1>KERALA PACKAGE</h1>
+                <div class="box" data-info="Day 1: Periyar National Park, Bamboo Rafting in Periyar Lake, Elephant Junction Visit, Kathakali Performance.">
+                    Day 1
+                </div>
+                <div class="box" data-info="Day 2: Fort Kochi Walk, Indo-Portuguese Museum, Marine Drive.">
+                    Day 2
+                </div>
+                <div class="box" data-info="Day 3: Tea Garden Visit,Eravikulam National Park,Mattupetty Dam.">
+                    Day 3
+                </div>
+                <div class="box" data-info="Day 4: Kundala Lake, Lakkam Waterfalls, Blossom Park.">
+                    Day 4
+                </div>
+                
+
+                <div id="info" class="info-box">
+                    <div id="day1-info" class="day-info" style="display: none;">
+                        <h2>Day 1 Details</h2>
+                        <p><b>Thekkady Exploration</b></p>
+                        <div class="day-info">
+                            
+                            <div class="day-info-text">
+                                
+                               <br> <ol type="1">
+                                    <li style="margin-top: 1%;">Periyar National Park: its diverse wildlife, including tigers, elephants, and other animals.</li>
+                                    <p style="color: red;">*₹500 per person</p>
+                                    <li style="margin-top: 25%;">Bamboo Rafting in Periyar Lake: offering a unique vantage point to observe wildlife.</li>
+                                    <p style="color: red;">*₹2000 per person</p>
+                                    <li style="margin-top: 20%;">Elephant Junction Visit: One of the highlights of Elephant Junction.</li>
+                                    <p style="color: red;">*₹400 per person (Museum)</p>
+                                    <li style="margin-top: 20%;">Kathakali Performance: Kathakali is an evolved dance form popular in the South Indian state of Kerala.</li>
+                                    <p style="color: red;">*₹600 per person</p>
+                                </ol>
+                            </div>
+                            <div class="day-info-image">
+                                <img src="./images/periyar.jpg" alt="Periyar National Park" style="width: 100%; border-radius: 8px;">
+                                <img src="./images/bamboo.jpg" alt="Bamboo Rafting in Periyar Lake" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/citymahal.jpg" alt="Elephant Junction Visit" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/kathakali.webp" alt="Kathakali Performance" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="day2-info" class="day-info" style="display: none;">
+                        <h2>Day 2 Details</h2>
+                        <p><b>Cochin Start</b></p>
+                        <div class="day-info">
+                            
+                            <div class="day-info-text">
+                                
+                               <br> <ol type="1">
+                                    <li style="margin-top: 1%;">Fort Kochi Walk: Famous for its rich history, landmarks, and seaside promenade.</li>
+                                    <p style="color: red;">*No Entry Fee</p>
+                                    <li style="margin-top: 23%;">Indo-Portuguese Museum: Its collection of artifacts that showcase the Portuguese influence on the region's art, culture, and history. </li>
+                                    <p style="color: red;">*₹10 per person</p>
+                                    <li style="margin-top: 17%;">Marine Drive: Famous for its scenic walkway along the backwaters of Vembanad Lake.</li>
+                                    <p style="color: red;">*No Entry Fee</p>
+
+                                </ol>
+                            </div>
+                            <div class="day-info-image">
+                                <img src="./images/fortkochi.avif" alt="Fort Kochi Walk" style="width: 100%; border-radius: 8px;">
+                                <img src="./images/indo.jpg" alt="Indo-Portuguese Museum" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/marine.png" alt="Marine Drive" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                               
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="day3-info" class="day-info" style="display: none;">
+                        <h2>Day 3 Details</h2>
+                        <p><b>Munnar Heights</b></p>
+                        <div class="day-info">
+                            
+                            <div class="day-info-text">
+                                
+                               <br> <ol type="1">
+                                <br><li style="margin-top: 1%;">Tea Garden Visit: The chance to see how tea is grown and processed, and for the beauty of the tea plantations.</li>
+                                <p style="color: red;">*₹75 per person</p>
+                                <li style="margin-top: 18%;">Eravikulam National Park: Biodiversity, stunning landscapes, and being home to the endangered Nilgiri Tahr.</li>
+                                <p style="color: red;">*₹95 per person</p>
+                                <li style="margin-top: 20%;">Mattupetty Dam: Its role in hydroelectricity and as a source of revenue, as well as for boating.</li>
+                                <p style="color: red;">*₹500 per person</p>
+
+                                </ol>
+                            </div>
+                            <div class="day-info-image">
+                                <img src="./images/tea.jpg" alt="Tea Garden Visit" style="width: 100%; border-radius: 8px;">
+                                <img src="./images/eravikulam.jpg" alt="Eravikulam National Park" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/matupetty.jpeg" alt="Mattupetty Dam" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                               
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div id="day4-info" class="day-info" style="display: none;">
+                        <h2>Day 4 Details</h2>
+                        <p><b>Munnar's Wild Side</b></p>
+                        <div class="day-info">
+                            
+                            <div class="day-info-text">
+                                
+                               <br> <ol type="1">
+                                    <li style="margin-top: 1%;">Kundala Lake: The very unique and rare Neela Kurunji flowers.</li>
+                                    <p style="color: red;">*₹100 per person</p>
+                                    <li style="margin-top: 20%;">Lakkam Waterfalls: Famous for its scenic beauty, accessibility, and refreshing experience. </li>
+                                    <p style="color: red;">*₹20 per person</p>
+                                    <li style="margin-top: 15%;">Blossom Park: Natural beauty, adventure activities, and tranquil setting.</li>
+                                    <p style="color: red;">*₹10 per person</p>
+
+                                </ol>
+                            </div>
+                            <div class="day-info-image">
+                                <img src="./images/kundala.jpg" alt="Kundala Lake" style="width: 100%; border-radius: 8px;">
+                                <img src="./images/lakkam.jpg" alt="Lakkam Waterfalls" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/blossom.webp" alt="Blossom Park" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                               
+                            </div>
+                        </div>
+
+                    </div>
+                  
+                    
+                </div>
+                <button id="back-button" style="display:none;"><a href="kerala.html">Back</a></button><br><br>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Travel Planner. All rights reserved.</p>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const boxes = document.querySelectorAll('.box');
+                const infoBox = document.getElementById('info');
+                const backButton = document.getElementById('back-button');
+
+                boxes.forEach(box => {
+                    box.addEventListener('click', () => {
+                        // Hide all boxes
+                        boxes.forEach(b => {
+                            b.style.display = 'none';
+                        });
+
+                        // Show the information about the clicked box
+                        const day = box.textContent.trim();
+                        const dayInfo = document.getElementById(`day${day.split(' ')[1]}-info`);
+                        dayInfo.style.display = 'block'; // Show the specific day info
+                        infoBox.style.display = 'block'; // Show the info box
+                        backButton.style.display = 'block'; // Show the back button
+                    });
+                });
+
+                backButton.addEventListener('click', () => {
+                    // Hide the info box and show all boxes again
+                    infoBox.style.display = 'none';
+                    boxes.forEach(b => {
+                        b.style.display = 'block';
+                    });
+                    backButton.style.display = 'none'; // Hide the back button
+                    const dayInfos = document.querySelectorAll('.day-info');
+                    dayInfos.forEach(info => {
+                        info.style.display = 'none'; // Hide all day info
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

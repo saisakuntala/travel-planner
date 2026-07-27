@@ -1,0 +1,164 @@
+<html>
+    <head>
+        <title>Travel Planner - Login</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .login-container {
+                background-color: white;
+                padding: 40px;
+                border-radius: 10px;
+                box-shadow: 0 0 20px rgba(215, 5, 5, 0.15);
+                width: 350px;
+                max-width: 100%;
+                margin: 16% auto 0 auto;
+            }
+
+            .login-container h2 {
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 25px;
+            }
+
+            .login-form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .login-form label {
+                margin-bottom: 5px;
+                font-size: 16px;
+            }
+
+            .login-form input {
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 14px;
+            }
+
+            .login-form button {
+                padding: 10px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            .login-form button:hover {
+                background-color: #0056b3;
+            }
+
+            .signup-link {
+                padding: 15px 0 0 0;
+                font-size: 14px;
+                text-align: center;
+            }
+
+            .alert {
+                padding: 10px;
+                background-color: #f8d7da;
+                color: #721c24;
+                border: 1px solid #f5c6cb;
+                border-radius: 5px;
+                margin-bottom: 15px;
+                font-size: 1.4rem;
+                text-align: center;
+            }
+
+            .alert-success {
+                background-color: #d4edda;
+                color: #155724;
+                border-color: #c3e6cb;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="menu-bar" class="fas fa-bars"></div>
+            <a href="index.html" class="logo"><span>TRAVEL </span>Planner</a>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="./mainpage/services.html">Services</a>
+                <a href="./mainpage/reviews.html">Reviews</a>
+                <a href="./mainpage/contact.html">Contact</a>
+            </nav>
+            <div class="icons">
+                <a href="register.html"><i class="fas fa-user" id="login-btn"> Register</i></a>
+            </div>
+        </header>
+
+        <div class="login-container">
+            <h2>Travel Planner Login</h2>
+            <div id="alert-box"></div>
+            <form class="login-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Login</button>
+                <p class="signup-link">Don't have an account? <a href="register.html">Sign up</a></p>
+            </form>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 Travel Planner. All rights reserved.</p>
+        </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const form = document.querySelector(".login-form");
+                const alertBox = document.getElementById("alert-box");
+
+                form.addEventListener("submit", (e) => {
+                    e.preventDefault();
+                    alertBox.innerHTML = ""; // Clear existing alert
+
+                    const email = document.getElementById("email").value.trim().toLowerCase();
+                    const password = document.getElementById("password").value;
+
+                    // 1. Get registered users from LocalStorage
+                    let users = localStorage.getItem("users");
+                    users = users ? JSON.parse(users) : [];
+
+                    // 2. Find matching user
+                    const user = users.find(u => u.email.toLowerCase() === email);
+
+                    if (user) {
+                        if (user.password === password) {
+                            successLogin(user);
+                        } else {
+                            showError("Password doesn't match");
+                        }
+                    } else {
+                        // Check for demo account
+                        if (email === "user@test.com" && password === "password123") {
+                            const demoUser = { fullname: "Demo Traveler", email: "user@test.com", location: "Mumbai" };
+                            successLogin(demoUser);
+                        } else {
+                            showError("Email doesn't exist");
+                        }
+                    }
+                });
+
+                function successLogin(userObj) {
+                    localStorage.setItem("loggedInUser", JSON.stringify(userObj));
+                    alertBox.innerHTML = `<div class="alert alert-success">Login successful! Redirecting...</div>`;
+                    setTimeout(() => {
+                        window.location.href = "home.html";
+                    }, 800);
+                }
+
+                function showError(msg) {
+                    alertBox.innerHTML = `<div class="alert">${msg}</div>`;
+                }
+            });
+        </script>
+    </body>
+</html>

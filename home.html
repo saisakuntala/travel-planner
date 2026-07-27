@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>Travel Planner</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="packages/planner.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+       
+    
+        <header>
+            <div id="menu-bar" class="fas fa-bars"></div>
+            <a href="#" class="logo"><span>TRAVEL </span>Planner</a>
+            <nav class="navbar">
+                <a href="home.html">Home</a>
+                <a href="./homepages/book.html">Book</a>
+                <a href="./homepages/gallery.html">Gallery</a>
+                <a href="./homepages/packages.html">Packages</a>
+            </nav> 
+            <div class="icons">
+                <a href="index.html"><i class="fas fa-user" id="logout-btn"> Log out</i></a>
+                
+            </div>          
+        </header>
+        <div class="container">
+             <div class="header">
+                 <h1>Travel Planner 🌍</h1><br>
+                  <p>Plan your dream trip with personalized itineraries.</p> 
+             </div>
+              
+               <div class="input-group">
+                 
+                  
+                 <select id="travel-days">
+                    <option value="">Travel Days</option>
+                    <option value="1day">1 day</option>
+                    <option value="2days">2 days</option>
+                    <option value="3days">3 days</option> 
+                    <option value="4days">4 days</option> 
+                </select>
+                <input type="text" placeholder="Enter a place" id="autocomplete">
+                 <select id="travel-style">
+                     <option value="">Travel style</option>
+                     <option value="adventure">Adventure</option>
+                     <option value="family">Family</option> 
+                     <option value="romantic">Romantic</option>
+                     <option value="friendly">Friendly</option> 
+                 </select>
+                </div>
+                 <button class="run-button" onclick="runPlanner()">Run</button>
+
+
+                 <div id="planner-result-container"></div>                 
+                 <div class="trip-plans">
+                     <h2>Recently Created Trip Plans</h2> 
+                     <div class="trip-plan">
+                         <img src="./homepages/gallery/charminar.jpg" alt="hyderabad"> 
+                         <p>4 Days Adventure in hyderabad</p> </div> <div class="trip-plan"> 
+                         <img src="./homepages/gallery/arak (1).jpg" alt="araku"> 
+                         <p>2-Day Romantic Trip to araku</p>
+                     </div> 
+                     <div class="trip-plan">
+                         <img src="./homepages/gallery/bang (1).jpg" alt="Banglore"> 
+                         <p>3-Day Family Trip to Banglore</p>
+                     </div> 
+                     <div class="trip-plan">
+                         <img src="./homepages/gallery/kerala (1).jpg" alt="kerala"> 
+                         <p>4-Day Friendly Trip in kerala</p> 
+                     </div> </div> </div>
+        
+
+        
+        <footer>
+            <p>&copy; 2025 Travel Planner. All rights reserved.</p>
+        </footer>
+        
+       
+
+   
+
+        <script src="packages/planner.js"></script>
+    </body>
+</html>

@@ -1,0 +1,291 @@
+<html>
+    <head>
+        <title>Bengaluru Packages</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="stylesheet" href="../style.css">
+        <meta charset="UTF-8">
+        <style>
+            
+            main {
+                margin-top: 5%;
+            }
+            .container {
+                max-width: 600px;
+                margin: auto;
+                text-align: center;
+            }
+            h1 {
+                color: #2c3e50;
+            }
+            .box {
+                background-color: #2980b9;
+                color: white;
+                padding: 20px;
+                margin: 10px;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            .box:hover {
+                background-color: #3498db;
+            }
+            .info-box {
+                margin-top: 20px;
+                padding: 20px;
+                border: 1px solid #2980b9;
+                border-radius: 8px;
+                display: none; 
+                background-color: #ffffff;
+                color: #333;
+                text-align: left;
+            }
+            .info-box img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+                margin-top: 10px;
+            }
+            
+            .info-box h2 {
+                font-size: 24px; 
+                text-align: center;
+            }
+            .info-box p {
+                font-size: 18px; 
+                margin: 10px 0;
+            }
+            .info-box ol {
+                font-size: 16px; 
+                padding-left: 20px;
+            }
+
+            #back-button a {
+                background-color: #2980b9; 
+                color: white; 
+                padding: 10px 20px; 
+                border: none; 
+                border-radius: 5px; 
+                cursor: pointer; 
+                font-size: 16px; 
+                margin-top: 10px; 
+                display: inline-block; 
+                
+            }
+            
+       
+            .day-info {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+              
+            }
+            
+            .day-info-text {
+                flex: 1;
+                padding-right: 20px; 
+            }
+            .day-info-image {
+                flex: 0 0 40%; 
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="menu-bar" class="fas fa-bars"></div>
+            <a href="#" class="logo"><span>TRAVEL </span>Planner</a>
+            <nav class="navbar">
+                <a href="../home.html">Home</a>
+                <a href="../homepages/book.html">Book</a>
+                <a href="../homepages/gallery.html">Gallery</a>
+                <a href="../homepages/packages.html">Packages</a>
+            </nav> 
+            <div class="icons">
+                <a href="../index.html"><i class="fas fa-user" id="logout-btn"> Log out</i></a>
+            </div>          
+        </header>
+
+        <main>
+            <div class="container">
+                <h1>BENGALURU PACKAGE</h1>
+                <div class="box" data-info="Day 1: ISKCON Temple, Bull Temple, Visvesvaraya Museum, Ranga Shankara Theatre, Church street.">
+                    Day 1
+                </div>
+                <div class="box" data-info="Day 2: Nandhi hills, Isha Foundation, Lalbagh Botanical Gardens, Bangalore Palace, MG Road, Brigade Road.">
+                    Day 2
+                </div>
+                <div class="box" data-info="Day 3: Mysore Palace, Chamundeshwari Temple, St. Philomena's Church.">
+                    Day 3
+                </div>
+                <div class="box" data-info="Day 4: Bannerghatta National Park, Butterfly Park, Cubbon Park, Vidhana Soudha.">
+                    Day 4
+                </div>
+                
+
+                <div id="info" class="info-box">
+                    <div id="day1-info" class="day-info" style="display: none;">
+                        <h2>Day 1 Details</h2>
+                        <p><b>Spiritual and Cultural Highlights</b></p>
+                        <div class="day-info">
+                            
+                            <div class="day-info-text">
+                                
+                               <br> <ol type="1">
+                                    <li style="margin-top: 1%;">ISKCON Temple: Special for their dedication to Lord Krishna and Radha.</li>
+                                    <p style="color: red;">*No Entry Fee</p>
+                                    <li style="margin-top: 25%;">Bull Temple: Its massive, monolithic statue of Nandi, the sacred bull of Lord Shiva.</li>
+                                    <p style="color: red;">*No Entry Fee</p>
+                                    <li style="margin-top: 20%;">Visvesvaraya Museum: This splendid museum, dedicated to the memory of Bharat Ratna M. Visvesvaraya.</li>
+                                    <p style="color: red;">*₹100 per person (Museum)</p>
+                                    <li style="margin-top: 20%;">Ranga Shankara Theatre: Bengaluru is renowned as a prominent venue for performing arts.</li>
+                                    <p style="color: red;">*₹200 to ₹400 per person</p>
+                                    <li style="margin-top: 12%;">Church street: A vibrant tourist hotspot, a major shopping and nightlife area, and its lively atmosphere.</li>
+                                    <p style="color: red;">*No Fee</p>
+                                </ol>
+                            </div>
+                            <div class="day-info-image">
+                                <img src="./images/iskonbang.webp" alt="ISKCON Temple" style="width: 100%; border-radius: 8px;">
+                                <img src="./images/bull.avif" alt="Bull Temple" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/visves.jpg" alt="Visvesvaraya Museum" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/ranga.webp" alt="Ranga Shankara Theatre" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/church.png" alt="Church street" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="day2-info" class="day-info" style="display: none;">
+                        <h2>Day 2 Details</h2>
+                        <p><b>Iconic Landmarks</b></p>
+                        <div class="day-info">
+                            
+                            <div class="day-info-text">
+                                
+                               <br> <ol type="1">
+                                    <li style="margin-top: 1%;">Nandhi hills: Scenic beauty, pleasant weather, and historical significance.</li>
+                                    <p style="color: red;">*₹30 per person</p>
+                                    <li style="margin-top: 12%;">Isha Foundation: Its Adiyogi statue, a 112-foot tall representation of Lord Shiva. </li>
+                                    <p style="color: red;">*₹100 to ₹200 per person(Light Show)</p>
+                                    <li style="margin-top: 17%;">Lalbagh Botanical Gardens: Its vast collection of diverse plant species.</li>
+                                    <p style="color: red;">*₹25 per person</p>
+                                    <li style="margin-top: 28%;">Bangalore Palace: Famous for its magnificent Tudor and Scottish Gothic architecture. </li>
+                                    <p style="color: red;">*₹230 per person</p>
+                                    <li style="margin-top: 20%;">MG Road & Brigade Road: Lively atmosphere, diverse shopping options.</li>
+                                    <p style="color: red;">*No Entry Fee</p>
+                                </ol>
+                            </div>
+                            <div class="day-info-image">
+                                <img src="./images/nandi.jpg" alt="Nandhi hills" style="width: 100%; border-radius: 8px;">
+                                <img src="./images/adiyogi.avif" alt="Isha Foundation" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/lalbagh.jpeg" alt="Lalbagh Botanical Gardens" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/bp.jpg" alt="Bangalore Palace" style="width: 100%; border-radius: 8px;">
+                                <img src="./images/mgroad.webp" alt="MG Road & Brigade Road" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                
+                               
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="day3-info" class="day-info" style="display: none;">
+                        <h2>Day 3 Details</h2>
+                        <p><b>Trip to Mysore</b></p>
+                        <div class="day-info">
+                            
+                            <div class="day-info-text">
+                                
+                               <br> <ol type="1">
+                                <br><li style="margin-top: 1%;">Mysore Palace: Its stunning Indo-Saracenic architecture.</li>
+                                <p style="color: red;">*₹100 per person</p>
+                                <li style="margin-top: 18%;">Chamundeshwari Temple: A prominent Hindu temple dedicated to Goddess Chamundeshwari.</li>
+                                <p style="color: red;">*No entry fee</p>
+                                <li style="margin-top: 20%;">St. Philomena's Church: Famous for its Neo-Gothic architecture.</li>
+                                <p style="color: red;">*No entry fee</p>
+
+                                </ol>
+                            </div>
+                            <div class="day-info-image">
+                                <img src="./images/mysore.jpg" alt="Mysore Palace" style="width: 100%; border-radius: 8px;">
+                                <img src="./images/chamundi.webp" alt="Chamundeshwari Temple" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/philomena.jpg" alt="St. Philomena's Church" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                               
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div id="day4-info" class="day-info" style="display: none;">
+                        <h2>Day 4 Details</h2>
+                        <p><b>Nature and Adventure</b></p>
+                        <div class="day-info">
+                            
+                            <div class="day-info-text">
+                                
+                               <br> <ol type="1">
+                                    <li style="margin-top: 1%;">Bannerghatta National Park: Its safaris, particularly the lion and tiger safaris, along with a zoo, butterfly park, and nature camp.</li>
+                                    <p style="color: red;">*₹100 per person</p>
+                                    <li style="margin-top: 15%;">Butterfly Park: India's first butterfly park. </li>
+                                    <p style="color: red;">*₹50 per person</p>
+                                    <li style="margin-top: 20%;">Cubbon Park: Lush greenery, historical buildings like the State Central Library.</li>
+                                    <p style="color: red;">*No entry fee</p>
+                                    <li style="margin-top: 20%;">Vidhana Soudha: The seat of the Karnataka state legislature.</li>
+                                    <p style="color: red;">*Entry restricted</p>
+
+                                </ol>
+                            </div>
+                            <div class="day-info-image">
+                                <img src="./images/bannergatta.webp" alt="Bannerghatta National Park" style="width: 100%; border-radius: 8px;">
+                                <img src="./images/butterfly.jpg" alt="Butterfly Park" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/cubbon.webp" alt="Cubbon Park" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/Vidhana Soudha.jpg" alt="Vidhana Soudha" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                               
+                               
+                            </div>
+                        </div>
+
+                    </div>
+                  
+                    
+                </div>
+                <button id="back-button" style="display:none;"><a href="banglore.html">Back</a></button><br><br>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Travel Planner. All rights reserved.</p>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const boxes = document.querySelectorAll('.box');
+                const infoBox = document.getElementById('info');
+                const backButton = document.getElementById('back-button');
+
+                boxes.forEach(box => {
+                    box.addEventListener('click', () => {
+                        // Hide all boxes
+                        boxes.forEach(b => {
+                            b.style.display = 'none';
+                        });
+
+                        // Show the information about the clicked box
+                        const day = box.textContent.trim();
+                        const dayInfo = document.getElementById(`day${day.split(' ')[1]}-info`);
+                        dayInfo.style.display = 'block'; // Show the specific day info
+                        infoBox.style.display = 'block'; // Show the info box
+                        backButton.style.display = 'block'; // Show the back button
+                    });
+                });
+
+                backButton.addEventListener('click', () => {
+                    // Hide the info box and show all boxes again
+                    infoBox.style.display = 'none';
+                    boxes.forEach(b => {
+                        b.style.display = 'block';
+                    });
+                    backButton.style.display = 'none'; // Hide the back button
+                    const dayInfos = document.querySelectorAll('.day-info');
+                    dayInfos.forEach(info => {
+                        info.style.display = 'none'; // Hide all day info
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

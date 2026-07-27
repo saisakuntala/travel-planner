@@ -1,0 +1,334 @@
+<html>
+    <head>
+        <title>Hyderabad Packages</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="stylesheet" href="../style.css">
+        <meta charset="UTF-8">
+        <style>
+            
+            main {
+                margin-top: 5%;
+            }
+            .container {
+                max-width: 600px;
+                margin: auto;
+                text-align: center;
+            }
+            h1 {
+                color: #2c3e50;
+            }
+            .box {
+                background-color: #2980b9;
+                color: white;
+                padding: 20px;
+                margin: 10px;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            .box:hover {
+                background-color: #3498db;
+            }
+            .info-box {
+                margin-top: 20px;
+                padding: 20px;
+                border: 1px solid #2980b9;
+                border-radius: 8px;
+                display: none; 
+                background-color: #ffffff;
+                color: #333;
+                text-align: left;
+            }
+            .info-box img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+                margin-top: 10px;
+            }
+            
+            .info-box h2 {
+                font-size: 24px; 
+                text-align: center;
+            }
+            .info-box p {
+                font-size: 18px; 
+                margin: 10px 0;
+            }
+            .info-box ol {
+                font-size: 16px; 
+                padding-left: 20px;
+            }
+
+            #back-button a {
+                background-color: #2980b9; 
+                color: white; 
+                padding: 10px 20px; 
+                border: none; 
+                border-radius: 5px; 
+                cursor: pointer; 
+                font-size: 16px; 
+                margin-top: 10px; 
+                display: inline-block; 
+                
+            }
+            
+       
+            .day-info {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+              
+            }
+            
+            .day-info-text {
+                flex: 1;
+                padding-right: 20px; 
+            }
+            .day-info-image {
+                flex: 0 0 40%; 
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="menu-bar" class="fas fa-bars"></div>
+            <a href="#" class="logo"><span>TRAVEL </span>Planner</a>
+            <nav class="navbar">
+                <a href="../home.html">Home</a>
+                <a href="../homepages/book.html">Book</a>
+                <a href="../homepages/gallery.html">Gallery</a>
+                <a href="../homepages/packages.html">Packages</a>
+            </nav> 
+            <div class="icons">
+                <a href="../index.html"><i class="fas fa-user" id="logout-btn"> Log out</i></a>
+            </div>          
+        </header>
+
+        <main>
+            <div class="container">
+                <h1>HYDERABAD PACKAGE</h1>
+                <div class="box" data-info="Day 1: Charminar, Golkonda Fort, Qutub Shahi Tombs, Birla Mandir, Mekkah Masjid, Iskon Temple.">
+                    Day 1
+                </div>
+                <div class="box" data-info="Day 2: Cafe Niloufer, Ukusa Cafe, Nehru Zoological Park, Inorbit Mall, Durgam Cheruvu, Hussain Sagar, Night Rides .">
+                    Day 2
+                </div>
+                <div class="box" data-info="Day 3: Ananthagiri Hills, Chilkur Balaji Temple, Yadigiri Gutta Temple, Swarnagiri Temple, Under the moon(UTM).">
+                    Day 3
+                </div>
+                <div class="box" data-info="Day 4: Shri Peddamma Talli Devalayam, Wonderla Rides.">
+                    Day 4
+                </div>
+                <div class="box" data-info="Day 5:  Lumbini Park, Sarath City Capital Mall(AMB), Nexus Hyderabad Mall, LuLu Mall Hyderabad.">
+                    Day 5
+                </div>
+                
+
+                <div id="info" class="info-box">
+                    <div id="day1-info" class="day-info" style="display: none;">
+                        <h2>Day 1 Details</h2>
+                        <p><b>Arrival & Old City Exploration</b></p>
+                        <div class="day-info">
+                            
+                            <div class="day-info-text">
+                                
+                               <br> <ol type="1">
+                                    <li style="margin-top: 3%;">Charminar: The Charminar, meaning "four minarets" in Urdu.</li>
+                                    <p style="color: red;">*₹50 per person</p>
+                                    <li style="margin-top: 30%;">Golkonda Fort: A historical fortress in Hyderabad.</li>
+                                    <p style="color: red;">*₹100 per person</p>
+                                    <li style="margin-top: 20%;">Qutub Shahi Tombs: A complex of Islamic tombs and mosques.</li>
+                                    <p style="color: red;">*₹25 per person</p>
+                                    <li style="margin-top: 35%;">Birla Mandir:  A prominent Hindu temple dedicated to Lord Venkateswara (Lord Vishnu).</li>
+                                    <p style="color: red;">*No Entry Fee</p>
+                                    <li style="margin-top: 20%;">Mekkah Masjid:  A Sunni congregational mosque.</li>
+                                    <p style="color: red;">*No Entry Fee</p>
+                                    <li style="margin-top: 20%;">Iskon Temple:  Sri Sri Radha Madanmohan Mandir.</li>
+                                    <p style="color: red;">*No Entry Fee</p>
+                                </ol>
+                            </div>
+                            <div class="day-info-image">
+                                <img src="./images/Charminar.webp" alt="Charminar" style="width: 100%; border-radius: 8px;">
+                                <img src="./images/golkonda.jpg" alt="Golkonda Fort" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/qutub.webp" alt="Qutub Shahi Tombs" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/birla.png" alt="Birla Mandir" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/mecca.webp" alt="Mekkah Masjid" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/iskonhyd.jpg" alt="Iskon Temple" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="day2-info" class="day-info" style="display: none;">
+                        <h2>Day 2 Details</h2>
+                        <p><b>Cafes & famous places</b></p>
+                        <div class="day-info">
+                            
+                            <div class="day-info-text">
+                                
+                               <br> <ol type="1">
+                                    <li style="margin-top: 1%;">Cafe Niloufer: An iconic tea in Hyderabad.</li>
+                                    <p style="color: red;">*No Entry Fee</p>
+                                    <li style="margin-top: 23%;">Ukusa Cafe: Ambients and nature friendly. </li>
+                                    <p style="color: red;">*No Entry Fee</p>
+                                    <li style="margin-top: 29%;">Nehru Zoological Park: It is the first Zoo in India to have animals arranged in Zoological order.</li>
+                                    <p style="color: red;">*₹100 per person</p>
+                                    <li style="margin-top: 20%;">Inorbit Mall: A rooftop food-court overlooking the cable-stayed bridge.</li>
+                                    <p style="color: red;">*No Entry Fee</p>
+                                    <li style="margin-top: 35%;">Durgam Cheruvu: Hyderabad's longest cable-stayed bridge. </li>
+                                    <p style="color: red;">*₹400 for a speedboat ride</p>
+                                    <li style="margin-top: 30%;">Hussain Sagar: Famous for its majestic 16-meter-high monolithic statue of Lord Buddha.</li>
+                                    <p style="color: red;">*₹55 to ₹400 per person</p>
+                                    <li style="margin-top: 13%;">Night Rides: Bike rides to explore the city in nights.</li>
+                                    <p style="color: red;">*No Fee</p>
+
+                                </ol>
+                            </div>
+                            <div class="day-info-image">
+                                <img src="./images/niloufer.jpg" alt="Cafe Niloufer" style="width: 100%; border-radius: 8px;">
+                                <img src="./images/ukusa.webp" alt="Ukusa Cafe" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/nehru.jpg" alt="Nehru Zoological Park" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/inorbit.jpg" alt="Inorbit Mall" style="width: 100%; border-radius: 8px;">
+                                <img src="./images/durgam.jpg" alt="Durgam Cheruvu" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/hussain.jpg" alt="Hussain Sagar" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/ni8.webp" alt="Night Rides" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                               
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="day3-info" class="day-info" style="display: none;">
+                        <h2>Day 3 Details</h2>
+                        <p><b>Heights & temples</b></p>
+                        <div class="day-info">
+                            
+                            <div class="day-info-text">
+                                
+                               <br> <ol type="1">
+                                <br><li style="margin-top: 0%;">Ananthagiri Hills: Ananthagiri Hills, located about 90 kilometers from Hyderabad.</li>
+                                <p style="color: red;">*No Entry Fee</p>
+                                <li style="margin-top: 18%;">Chilkur Balaji Temple: Its rich history, serene location, and unique traditions.</li>
+                                <p style="color: red;">*No Entry Fee</p>
+                                <li style="margin-top: 29%;">Yadigiri Gutta Temple: Sri Lakshmi Narasimha Swamy Temple.</li>
+                                <p style="color: red;">*₹150 to ₹250 per person</p>
+                                <li style="margin-top: 18%;">Swarnagiri Temple:  Hindu temple dedicated to Lord Venkateswara (Balaji).</li>
+                                <p style="color: red;">*₹50 per person</p>
+                                <li style="margin-top: 25%;">Under the moon(UTM): Known for its beautiful lake and nature, especially at night with the moon's reflection. .</li>
+                                <p style="color: red;">*₹200 per person</p>
+
+                                </ol>
+                            </div>
+                            <div class="day-info-image">
+                                <img src="./images/ananthagiri.webp" alt="Ananthagiri Hills" style="width: 100%; border-radius: 8px;">
+                                <img src="./images/chilkur.jpg" alt="Chilkur Balaji Temple" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/yadigiri.jpeg" alt="Yadigiri Gutta Temple" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/swarnagiri.jpg" alt="Swarnagiri Temple" style="width: 100%; border-radius: 8px;">
+                                <img src="./images/utm.webp" alt="Under the moon(UTM)" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                               
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div id="day4-info" class="day-info" style="display: none;">
+                        <h2>Day 4 Details</h2>
+                        <p><b>Wonderla Rides</b></p>
+                        <div class="day-info">
+                            
+                            <div class="day-info-text">
+                                
+                               <br> <ol type="1">
+                                <br><li style="margin-top: 1%;">Shri Peddamma Talli Devalayam: The temple is known for its vibrant celebrations.</li>
+                                <p style="color: red;">*No Entry Fees</p>
+                                <li style="margin-top: 10%;">Wonderla Rides: Known for its thrilling rides, water attractions, and family-friendly environment.</li>
+                                <p style="color: red;">*₹1550 per person(Normal) </p>
+                                <p style="color: red;">*₹2100 per person(Fastrack) </p>
+                                
+
+                                </ol>
+                            </div>
+                            <div class="day-info-image">
+                                <img src="./images/pedhamma.webp" alt="Shri Peddamma Talli Devalayam" style="width: 100%; border-radius: 8px;">
+                                <img src="./images/wondela.jpg" alt="Wonderla Rides" style="width: 100%; border-radius: 8px; margin-top: 15px;">
+                                
+                               
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div id="day5-info" class="day-info" style="display: none;">
+                        <h2>Day 5 Details</h2>
+                        <p><b>Malls & Departure</b></p>
+                        <div class="day-info">
+                            
+                            <div class="day-info-text">
+                                
+                               <br> <ol type="1">
+                                    <li style="margin-top: 1%;">Lumbini Park: Named after Lumbini, the birthplace of Lord Buddha in Nepal.</li>
+                                    <p style="color: red;">*₹50 per person</p>
+                                    <li style="margin-top: 20%;">Sarath City Capital Mall(AMB): It rises 8 floors into the sky and each floor. </li>
+                                    <p style="color: red;">*No Entry Fees</p>
+                                    <li style="margin-top: 15%;">Nexus Hyderabad Mall: Forum Sujana Mall.</li>
+                                    <p style="color: red;">*No Entry Fees</p>
+                                    <li style="margin-top: 11%;">LuLu Mall: Exceptional shopping and entertainment haven.</li>
+                                    <p style="color: red;">*No Entry Fees</p>
+
+                                </ol>
+                            </div>
+                            <div class="day-info-image">
+                                <img src="./images/lumbini.jpg" alt="Lumbini Park" style="width: 100%; border-radius: 8px;">
+                                <img src="./images/amb.jpg" alt="AMB Mall" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/nexus.jpg" alt="Nexus Hyderabad Mall" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/lulu.jpg" alt="LuLu Mall" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                               
+                            </div>
+                        </div>
+
+                    </div>
+                  
+                    
+                </div>
+                <button id="back-button" style="display:none;"><a href="hyderabad.html">Back</a></button><br><br>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Travel Planner. All rights reserved.</p>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const boxes = document.querySelectorAll('.box');
+                const infoBox = document.getElementById('info');
+                const backButton = document.getElementById('back-button');
+
+                boxes.forEach(box => {
+                    box.addEventListener('click', () => {
+                        // Hide all boxes
+                        boxes.forEach(b => {
+                            b.style.display = 'none';
+                        });
+
+                        // Show the information about the clicked box
+                        const day = box.textContent.trim();
+                        const dayInfo = document.getElementById(`day${day.split(' ')[1]}-info`);
+                        dayInfo.style.display = 'block'; // Show the specific day info
+                        infoBox.style.display = 'block'; // Show the info box
+                        backButton.style.display = 'block'; // Show the back button
+                    });
+                });
+
+                backButton.addEventListener('click', () => {
+                    // Hide the info box and show all boxes again
+                    infoBox.style.display = 'none';
+                    boxes.forEach(b => {
+                        b.style.display = 'block';
+                    });
+                    backButton.style.display = 'none'; // Hide the back button
+                    const dayInfos = document.querySelectorAll('.day-info');
+                    dayInfos.forEach(info => {
+                        info.style.display = 'none'; // Hide all day info
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

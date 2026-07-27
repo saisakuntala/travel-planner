@@ -1,0 +1,668 @@
+/* planner.css - Trip Planner Stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary-color: #6a1b9a;
+    --primary-hover: #4a148c;
+    --accent-color: #ff5252;
+    --bg-glass: rgba(255, 255, 255, 0.85);
+    --border-glass: rgba(255, 255, 255, 0.4);
+    --shadow-soft: 0 8px 32px 0 rgba(31, 38, 135, 0.08);
+    --text-dark: #2d3748;
+    --text-muted: #718096;
+}
+
+/* Autocomplete Suggestion Dropdown styling */
+.autocomplete-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.autocomplete-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 30px;
+    right: 30px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 9999;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.autocomplete-suggestion {
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f7fafc;
+    transition: background 0.15s ease;
+}
+
+.autocomplete-suggestion:hover {
+    background: #f7fafc;
+    color: var(--primary-color);
+}
+
+.autocomplete-suggestion i {
+    margin-right: 12px;
+    color: var(--text-muted);
+}
+
+/* Result Dashboard Container */
+.planner-dashboard {
+    font-family: 'Outfit', sans-serif !important;
+    margin-top: 50px;
+    background: rgba(247, 250, 252, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--border-glass);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: var(--shadow-soft);
+    color: var(--text-dark);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-out;
+}
+
+.planner-dashboard.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dashboard Header & Banner styling */
+.planner-banner {
+    position: relative;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+.planner-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.planner-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.4) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px 30px;
+    color: white;
+}
+
+.planner-banner-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0;
+    text-transform: capitalize;
+    letter-spacing: -0.5px;
+}
+
+.planner-banner-subtitle {
+    font-size: 1.6rem;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-top: 5px;
+    text-transform: capitalize;
+}
+
+/* Dashboard Layout Columns */
+.planner-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+@media (max-width: 992px) {
+    .planner-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Left Column: Itinerary list styles */
+.itinerary-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #edf2f7;
+}
+
+/* Day selector tabs */
+.day-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.day-tab-btn {
+    background: #edf2f7;
+    color: #4a5568;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.day-tab-btn:hover {
+    background: #e2e8f0;
+}
+
+.day-tab-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Vertical Timeline */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+    margin-top: 10px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background: #e2e8f0;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    transition: transform 0.2s ease;
+}
+
+.timeline-item:hover {
+    transform: translateX(4px);
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -30px;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    border: 4px solid var(--primary-color);
+    z-index: 2;
+    transition: all 0.2s ease;
+}
+
+.timeline-item:hover .timeline-marker {
+    background: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.timeline-content {
+    background: #f8fafc;
+    border: 1px solid #edf2f7;
+    border-radius: 12px;
+    padding: 18px;
+    position: relative;
+}
+
+.timeline-time {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    display: inline-block;
+    background: rgba(106, 27, 154, 0.08);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.timeline-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.timeline-cost-badge {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #e28743;
+    background: rgba(226, 135, 67, 0.1);
+    padding: 4px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.timeline-cost-badge.free {
+    color: #48bb78;
+    background: rgba(72, 187, 120, 0.1);
+}
+
+.timeline-desc {
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.timeline-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btn-action {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 1.3rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.15s ease;
+}
+
+.btn-action:hover {
+    color: var(--primary-color);
+    background: #edf2f7;
+}
+
+.btn-action.delete-action:hover {
+    color: var(--accent-color);
+    background: #fff5f5;
+}
+
+/* Timeline Activity Images */
+.timeline-img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 10px;
+    border: 1px solid #e2e8f0;
+}
+
+/* Custom Activity Form in timeline */
+.add-custom-btn {
+    background: transparent;
+    border: 2px dashed #cbd5e0;
+    color: var(--text-muted);
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.add-custom-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background: rgba(106, 27, 154, 0.02);
+}
+
+/* Custom Activity Modal Form (rendered inline) */
+.custom-activity-form-card {
+    background: #fff;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 15px;
+    animation: slideDown 0.2s ease-out;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+}
+
+.form-group input, .form-group textarea {
+    padding: 10px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    font-family: inherit;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: var(--primary-color);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-form {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-form-cancel {
+    background: #e2e8f0;
+    color: #4a5568;
+}
+
+.btn-form-save {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Right Column Cards styling */
+.widget-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #edf2f7;
+    margin-bottom: 25px;
+}
+
+.widget-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+    border-bottom: 2px solid #f7fafc;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Weather Widget */
+.weather-details {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.weather-icon-large {
+    font-size: 4.5rem;
+    color: #e28743;
+}
+
+.weather-temp-info h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.weather-temp-info p {
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    margin: 3px 0 0;
+}
+
+.weather-extra {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    background: #f8fafc;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1.3rem;
+}
+
+/* Packing Checklist */
+.packing-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.packing-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #f7fafc;
+}
+
+.packing-item input[type="checkbox"] {
+    margin-right: 12px;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.packing-item label {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.packing-item input:checked + label {
+    text-decoration: line-through;
+    color: var(--text-muted);
+}
+
+/* Budget Estimator */
+.budget-estimator {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.budget-input-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.budget-input-row label {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.budget-input-row select, .budget-input-row input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    font-size: 1.4rem;
+}
+
+.budget-progress-container {
+    background: #edf2f7;
+    height: 8px;
+    border-radius: 4px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.budget-progress-bar {
+    height: 100%;
+    background: linear-gradient(to right, #48bb78, #e28743, var(--accent-color));
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.budget-summary-cost {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-top: 10px;
+    text-align: center;
+}
+
+.budget-summary-breakdown {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    border-top: 1px solid #edf2f7;
+    padding-top: 12px;
+}
+
+/* Control Buttons (Export, Print, Save) */
+.dashboard-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn-dashboard {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn-dashboard-save {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-dashboard-save:hover {
+    background: var(--primary-hover);
+}
+
+.btn-dashboard-print {
+    background: #edf2f7;
+    color: #4a5568;
+}
+
+.btn-dashboard-print:hover {
+    background: #e2e8f0;
+}
+
+/* Animations */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* PRINT STYLES - Hides interactive clutter, prints beautifully */
+@media print {
+    body {
+        background: white !important;
+        color: black !important;
+        height: auto !important;
+    }
+    header, footer, .navbar, .icons, .input-group, .run-button, .trip-plans, .dashboard-actions, .add-custom-btn, .btn-action, .timeline-actions {
+        display: none !important;
+    }
+    .planner-dashboard {
+        border: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        padding: 0 !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    .planner-grid {
+        display: block !important;
+    }
+    .itinerary-card {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+    }
+    .day-tabs {
+        display: none !important;
+    }
+    .day-content-section {
+        display: block !important;
+        page-break-after: always;
+        margin-bottom: 40px;
+    }
+    .day-content-section h2 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #333;
+        padding-bottom: 8px;
+    }
+    .timeline::before {
+        background: #333 !important;
+    }
+    .timeline-item {
+        page-break-inside: avoid;
+    }
+    .timeline-content {
+        background: transparent !important;
+        border: none !important;
+        padding-left: 0 !important;
+    }
+    .timeline-img {
+        max-height: 250px !important;
+    }
+    .widget-card {
+        page-break-inside: avoid;
+        border: 1px solid #333 !important;
+        box-shadow: none !important;
+    }
+}

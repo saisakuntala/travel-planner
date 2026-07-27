@@ -1,0 +1,320 @@
+<html>
+    <head>
+        <title>Goa Packages</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="stylesheet" href="../style.css">
+        <meta charset="UTF-8">
+        <style>
+            
+            main {
+                margin-top: 5%;
+            }
+            .container {
+                max-width: 600px;
+                margin: auto;
+                text-align: center;
+            }
+            h1 {
+                color: #2c3e50;
+            }
+            .box {
+                background-color: #2980b9;
+                color: white;
+                padding: 20px;
+                margin: 10px;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            .box:hover {
+                background-color: #3498db;
+            }
+            .info-box {
+                margin-top: 20px;
+                padding: 20px;
+                border: 1px solid #2980b9;
+                border-radius: 8px;
+                display: none; 
+                background-color: #ffffff;
+                color: #333;
+                text-align: left;
+            }
+            .info-box img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+                margin-top: 10px;
+            }
+            
+            .info-box h2 {
+                font-size: 24px; 
+                text-align: center;
+            }
+            .info-box p {
+                font-size: 18px; 
+                margin: 10px 0;
+            }
+            .info-box ol {
+                font-size: 16px; 
+                padding-left: 20px;
+            }
+
+            #back-button a {
+                background-color: #2980b9; 
+                color: white; 
+                padding: 10px 20px; 
+                border: none; 
+                border-radius: 5px; 
+                cursor: pointer; 
+                font-size: 16px; 
+                margin-top: 10px; 
+                display: inline-block; 
+                
+            }
+            
+       
+            .day-info {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+              
+            }
+            
+            .day-info-text {
+                flex: 1;
+                padding-right: 20px; 
+            }
+            .day-info-image {
+                flex: 0 0 40%; 
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="menu-bar" class="fas fa-bars"></div>
+            <a href="#" class="logo"><span>TRAVEL </span>Planner</a>
+            <nav class="navbar">
+                <a href="../home.html">Home</a>
+                <a href="../homepages/book.html">Book</a>
+                <a href="../homepages/gallery.html">Gallery</a>
+                <a href="../homepages/packages.html">Packages</a>
+            </nav> 
+            <div class="icons">
+                <a href="../index.html"><i class="fas fa-user" id="logout-btn"> Log out</i></a>
+            </div>          
+        </header>
+
+        <main>
+            <div class="container">
+                <h1>GOA PACKAGE</h1>
+                <div class="box" data-info="Day 1: Anjuna Beach, Chapora Fort, Sweet Lake, Arambol Beach.">
+                    Day 1
+                </div>
+                <div class="box" data-info="Day 2: Baga Beach, Para Road, Agoda Fort, Boating in Coco Jetty, Tito's Line Pubs.">
+                    Day 2
+                </div>
+                <div class="box" data-info="Day 3: Activities in Goa.">
+                    Day 3
+                </div>
+                <div class="box" data-info="Day 4: Basilica of Bom Jesus, St. Cajetan Church, Se Cathedral, Fountains Goa.">
+                    Day 4
+                </div>
+                <div class="box" data-info="Day 5: Cabo de rama fort, Cabo de rama beach, Pebble beach, Butterfly beach.">
+                    Day 5
+                </div>
+
+                <div id="info" class="info-box">
+                    <div id="day1-info" class="day-info" style="display: none;">
+                        <h2>Day 1 Details</h2>
+                        <p><b>Explore beautiful beaches and vibrant culture of North Goa.</b></p>
+                        <div class="day-info">
+                            
+                            <div class="day-info-text">
+                                
+                               <br> <ol type="1">
+                                    <li style="margin-top: 1%;">Anjuna Beach: Famous for its nightlife and flea market.</li>
+                                    <p style="color: red;">*No entry fee</p>
+                                    <li style="margin-top: 30%;">Chapora Fort: Offers stunning views of the coastline.</li>
+                                    <p style="color: red;">*No entry fee</p>
+                                    <li style="margin-top: 25%;">Sweet Lake: A serene spot for relaxation.</li>
+                                    <p style="color: red;">*No entry fee</p>
+                                    <li style="margin-top: 30%;">Arambol Beach: Known for its bohemian vibe and live music.</li>
+                                    <p style="color: red;">*No entry fee</p>
+                                </ol>
+                            </div>
+                            <div class="day-info-image">
+                                <img src="./images/anjuna.webp" alt="Anjuna Beach" style="width: 100%; border-radius: 8px;">
+                                <img src="./images/chapora.webp" alt="Chapora Fort" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/sweet-water-lake.jpg" alt="Sweet lake" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/arambol.jpg" alt="Arambol Beach" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="day2-info" class="day-info" style="display: none;">
+                        <h2>Day 2 Details</h2>
+                        <p><b>Experience the lively atmosphere of North Goa.</b></p>
+                        <div class="day-info">
+                            
+                            <div class="day-info-text">
+                                
+                               <br> <ol type="1">
+                                    <li style="margin-top: 1%;">Baga Beach: Popular for water sports and nightlife.</li>
+                                    <p style="color: red;">*No entry fee</p>
+                                    <li style="margin-top: 30%;">Para Road: Scenic drive with beautiful views.</li>
+                                    <p style="color: red;">*No entry fee</p>
+                                    <li style="margin-top: 30%;">Aguada Fort: Historical site with panoramic views.</li>
+                                    <p style="color: red;">*No entry fee</p>
+                                    <li style="margin-top: 30%;">Boating in Coco Jetty: Enjoy the mangrove forests.</li>
+                                    <p style="color: red;">*The cost of a boat trip starts from Rs 1499</p>
+                                </ol>
+                            </div>
+                            <div class="day-info-image">
+                                <img src="./images/baga.avif" alt="Baga Beach" style="width: 100%; border-radius: 8px;">
+                                <img src="./images/para.jpg" alt="Para Road" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/aguada.jpg" alt="Aguada Fort" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/coco.webp" alt="Coco Jetty" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="day3-info" class="day-info" style="display: none;">
+                        <h2>Day 3 Details</h2>
+                        <p><b>Engage in various activities like water sports, sightseeing, and local tours.</b></p>
+                        <div class="day-info">
+                            
+                            <div class="day-info-text">
+                                
+                               <br> <ol type="1">
+                                    <br><li>Parasailing: Parasailing is a recreational activity where you are pulled behind a boat or vehicle while wearing a parachute.</li>
+                                    <p style="color: red;font-size: 16px;">*Price:- ₹800 - ₹1,200 per person<br><br><br></p>
+                                    
+                                    <li>Jet Skiing: The activity of using a Jet Ski to travel across water.</li>
+                                    <p style="color: red;font-size: 16px;">*Price:- ₹500 - ₹800 per person<br><br><br><br><br></p>
+                                    
+                                    <li>Scuba Diving: Scuba diving is a mode of underwater diving whereby divers use breathing equipment.</li>
+                                    <p style="color: red;font-size: 16px;">*Price:- ₹3,000 - ₹5,000 per person<br><br><br><br></p>
+
+                                    
+                                    <li>Flyboarding: Flyboarding is a water sport where a rider stands on a board attached to a watercraft by a hose.</li>
+                                    <p style="color: red;font-size: 16px;">*Price:- ₹2,500 - ₹3,500 per person<br><br><br></p>
+                                    
+                                    <li>Wind Surfing: Windsurfing is a wind-propelled water sport that is a combination of sailing and surfing.</li>
+                                    <p style="color: red;font-size: 16px;">*Price:- ₹1,500 - ₹2,500 per person</p>
+                                    
+                                </ol>
+                            </div>
+                            <div class="day-info-image">
+                                <img src="./images/parasailing.avif" alt="parasailing" style="width: 100%; border-radius: 8px;">
+                                <img src="./images/jetskilling.jpg" alt="Jet Skiing" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/scuba.avif" alt="Scuba Diving" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/flyboarding.webp" alt="Flyboarding" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/windsurfing.jpg" alt="Wind Surfing" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="day4-info" class="day-info" style="display: none;">
+                        <h2>Day 4 Details</h2>
+                        <p><b>Visit the historical churches and enjoy the local culture.</b></p>
+                        <div class="day-info">
+                            
+                            <div class="day-info-text">
+                                
+                               <br> <ol type="1">
+                                <br><li style="margin-top: 1%;">Basilica of Bom Jesus: A UNESCO World Heritage Site.</li>
+                                <p style="color: red;">*No entry fee</p>
+                                <li style="margin-top: 30%;">St. Cajetan Church: Known for its stunning architecture.</li>
+                                <p style="color: red;">*No entry fee</p>
+                                <li style="margin-top: 30%;">Se Cathedral: One of the largest churches in Asia.</li>
+                                <p style="color: red;">*No entry fee</p>
+                                <li style="margin-top: 30%;">Fountains Goa: A beautiful spot for relaxation.</li>
+                                <p style="color: red;">*No entry fee</p>
+                                </ol>
+                            </div>
+                            <div class="day-info-image">
+                                <img src="./images/Basilica of Bom Jesus.jpg" alt="Basilica of Bom Jesus" style="width: 100%; border-radius: 8px;">
+                                <img src="./images/St. Cajetan Church.jpg" alt="St. Cajetan Church" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/Se Cathedral.jpg" alt="Se Cathedral" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/Fountains Goa.webp" alt="Fountains Goa" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                            </div>
+                        </div>
+                        <ul>
+                            
+                            
+                            
+
+                        </ul>
+                    </div>
+                    <div id="day5-info" class="day-info" style="display: none;">
+                        <h2>Day 5 Details</h2>
+                        <p><b>Explore the hidden gems of Goa.</b></p>
+                        <div class="day-info">
+                            
+                            <div class="day-info-text">
+                                
+                               <br> <ol type="1">
+                                <br><li style="margin-top: 1%;">Cabo de Rama Fort: A historical site with breathtaking views.</li>
+                                <p style="color: red;">*No entry fee</p>
+                                <li style="margin-top: 20%;">Cabo de Rama Beach: A tranquil beach perfect for relaxation.</li>
+                                <p style="color: red;">*No entry fee</p>
+                                <li style="margin-top: 20%;">Pebble Beach: Known for its unique pebbled shoreline.</li>
+                                <p style="color: red;">*No entry fee</p>
+                                <li style="margin-top: 25%;">Butterfly Beach: A secluded beach ideal for nature lovers.</li>
+                                <p style="color: red;">*No entry fee</p>
+                                </ol>
+                            </div>
+                            <div class="day-info-image">
+                                <img src="./images/Cabo de Rama Fort.jpg" alt="Cabo de Rama Fort" style="width: 100%; border-radius: 8px;">
+                                <img src="./images/Cabo de Rama Beach.webp" alt="Cabo de Rama Beach" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/Pebble Beach.avif" alt="Pebble Beach" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                                <img src="./images/Butterfly Beach.jpg" alt="Butterfly Beach" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+                <button id="back-button" style="display:none;"><a href="goa.html">Back</a></button><br><br>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Travel Planner. All rights reserved.</p>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const boxes = document.querySelectorAll('.box');
+                const infoBox = document.getElementById('info');
+                const backButton = document.getElementById('back-button');
+
+                boxes.forEach(box => {
+                    box.addEventListener('click', () => {
+                        // Hide all boxes
+                        boxes.forEach(b => {
+                            b.style.display = 'none';
+                        });
+
+                        // Show the information about the clicked box
+                        const day = box.textContent.trim();
+                        const dayInfo = document.getElementById(`day${day.split(' ')[1]}-info`);
+                        dayInfo.style.display = 'block'; // Show the specific day info
+                        infoBox.style.display = 'block'; // Show the info box
+                        backButton.style.display = 'block'; // Show the back button
+                    });
+                });
+
+                backButton.addEventListener('click', () => {
+                    // Hide the info box and show all boxes again
+                    infoBox.style.display = 'none';
+                    boxes.forEach(b => {
+                        b.style.display = 'block';
+                    });
+                    backButton.style.display = 'none'; // Hide the back button
+                    const dayInfos = document.querySelectorAll('.day-info');
+                    dayInfos.forEach(info => {
+                        info.style.display = 'none'; // Hide all day info
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

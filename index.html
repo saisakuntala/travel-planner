@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Travel Planner</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div id="menu-bar" class="fas fa-bars"></div>
+            <a href="index.html" class="logo"><span>TRAVEL </span>Planner</a>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="./mainpage/services.html">Services</a>
+                <a href="./mainpage/reviews.html">Reviews</a>
+                <a href="./mainpage/contact.html">Contact</a>
+            </nav>
+            <div class="icons">
+                <a href="login.html"><i class="fas fa-user" id="login-btn"> Login</i></a>
+                <a href="register.html"><i class="fas fa-user" id="login-btn"> Register</i></a>
+            </div>
+        </header>
+        
+        <!--home section starts-->
+        <section class="home" id="home">
+            <div class="content">
+                <h3>Adventure is worthwhile</h3>
+                <p>discover new palces with us,adventure waits</p>
+                <a href="./mainpage/services.html" class="btn">Discover more</a>
+            </div>
+            <div class="controls">
+                <span class="vid-btn active" data-src="./mainpage/vid-5.mp4"></span>
+                <span class="vid-btn" data-src="./mainpage/vid-2.mp4"></span>
+                <span class="vid-btn" data-src="./mainpage/vid-3.mp4"></span>
+                <span class="vid-btn" data-src="./mainpage/vid-4.mp4"></span>
+            </div>
+            <div class="video-container">
+                <video src="./mainpage/vid-5.mp4" id="video-slider" loop autoplay muted></video>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2025 Travel Planner. All rights reserved.</p>
+        </footer>
+        
+        <script src="script.js"></script>
+    </body>
+</html>
