@@ -2,8 +2,8 @@
     <head>
         <title>Travel Planner</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="packages/planner.css">
+        <link rel="stylesheet" href="style.css?v=1.1">
+        <link rel="stylesheet" href="packages/planner.css?v=1.1">
         <meta charset="UTF-8">
     </head>
     <body>
@@ -53,21 +53,52 @@
 
                  <div id="planner-result-container"></div>                 
                  <div class="trip-plans">
-                     <h2>Recently Created Trip Plans</h2> 
-                     <div class="trip-plan">
-                         <img src="./homepages/gallery/charminar.jpg" alt="hyderabad"> 
-                         <p>4 Days Adventure in hyderabad</p> </div> <div class="trip-plan"> 
-                         <img src="./homepages/gallery/arak (1).jpg" alt="araku"> 
-                         <p>2-Day Romantic Trip to araku</p>
-                     </div> 
-                     <div class="trip-plan">
-                         <img src="./homepages/gallery/bang (1).jpg" alt="Banglore"> 
-                         <p>3-Day Family Trip to Banglore</p>
-                     </div> 
-                     <div class="trip-plan">
-                         <img src="./homepages/gallery/kerala (1).jpg" alt="kerala"> 
-                         <p>4-Day Friendly Trip in kerala</p> 
-                     </div> </div> </div>
+                     <div class="trip-plans-header">
+                         <h2>Recently Created Trip Plans</h2>
+                     </div>
+                     <div class="trip-plans-grid">
+                         <div class="trip-plan-card" onclick="loadDefaultTrip('hyderabad', 4, 'adventure')">
+                             <div class="trip-plan-image-container">
+                                 <img src="./homepages/gallery/charminar.jpg" alt="hyderabad">
+                                 <span class="trip-plan-badge badge-adventure">Adventure</span>
+                             </div>
+                             <div class="trip-plan-info">
+                                 <h3>Hyderabad</h3>
+                                 <p><i class="far fa-calendar-alt"></i> 4 Days Itinerary</p>
+                             </div>
+                         </div>
+                         <div class="trip-plan-card" onclick="loadDefaultTrip('araku', 2, 'romantic')">
+                             <div class="trip-plan-image-container">
+                                 <img src="./homepages/gallery/arak (1).jpg" alt="araku">
+                                 <span class="trip-plan-badge badge-romantic">Romantic</span>
+                             </div>
+                             <div class="trip-plan-info">
+                                 <h3>Araku</h3>
+                                 <p><i class="far fa-calendar-alt"></i> 2 Days Itinerary</p>
+                             </div>
+                         </div>
+                         <div class="trip-plan-card" onclick="loadDefaultTrip('banglore', 3, 'family')">
+                             <div class="trip-plan-image-container">
+                                 <img src="./homepages/gallery/bang (1).jpg" alt="Banglore">
+                                 <span class="trip-plan-badge badge-family">Family</span>
+                             </div>
+                             <div class="trip-plan-info">
+                                 <h3>Bangalore</h3>
+                                 <p><i class="far fa-calendar-alt"></i> 3 Days Itinerary</p>
+                             </div>
+                         </div>
+                         <div class="trip-plan-card" onclick="loadDefaultTrip('kerala', 4, 'friendly')">
+                             <div class="trip-plan-image-container">
+                                 <img src="./homepages/gallery/kerala (1).jpg" alt="kerala">
+                                 <span class="trip-plan-badge badge-friendly">Friendly</span>
+                             </div>
+                             <div class="trip-plan-info">
+                                 <h3>Kerala</h3>
+                                 <p><i class="far fa-calendar-alt"></i> 4 Days Itinerary</p>
+                             </div>
+                         </div>
+                     </div>
+                 </div> </div>
         
 
         
@@ -79,6 +110,6 @@
 
    
 
-        <script src="packages/planner.js"></script>
+        <script src="packages/planner.js?v=1.1"></script>
     </body>
 </html>

@@ -1241,7 +1241,16 @@ function setupSavedTripsList() {
     let saved = localStorage.getItem("saved_trips");
     saved = saved ? JSON.parse(saved) : [];
 
-    // If empty, insert placeholders in local storage for default display
+    // Header with optional Clear All action if saved trips exist
+    let headerHtml = `
+        <div class="trip-plans-header">
+            <h2>Recently Created Trip Plans</h2>
+            ${saved.length > 0 ? `<button class="clear-history-btn" onclick="clearAllSavedTrips()"><i class="fas fa-trash-alt"></i> Clear All</button>` : ''}
+        </div>
+    `;
+
+    let cardsHtml = '';
+
     if (saved.length === 0) {
         const placeholders = [
             { destination: "Hyderabad", style: "Adventure", daysCount: 4, banner: "./homepages/gallery/charminar.jpg" },
@@ -1249,34 +1258,63 @@ function setupSavedTripsList() {
             { destination: "Banglore", style: "Family", daysCount: 3, banner: "./homepages/gallery/bang (1).jpg" },
             { destination: "Kerala", style: "Friendly", daysCount: 4, banner: "./homepages/gallery/kerala (1).jpg" }
         ];
-        
-        // Render placeholders in UI
-        container.innerHTML = `
-            <h2>Recently Created Trip Plans</h2>
-            <div style="display: flex; justify-content: center; flex-wrap: wrap;">
-                ${placeholders.map(p => `
-                    <div class="trip-plan" onclick="loadDefaultTrip('${p.destination.toLowerCase()}', ${p.daysCount}, '${p.style.toLowerCase()}')">
-                        <img src="${p.banner}" alt="${p.destination}">
-                        <p><b>${p.daysCount} Days ${p.style}</b> in ${p.destination}</p>
-                    </div>
-                `).join('')}
+
+        cardsHtml = placeholders.map(p => `
+            <div class="trip-plan-card" onclick="loadDefaultTrip('${p.destination.toLowerCase()}', ${p.daysCount}, '${p.style.toLowerCase()}')">
+                <div class="trip-plan-image-container">
+                    <img src="${p.banner}" alt="${p.destination}">
+                    <span class="trip-plan-badge badge-${p.style.toLowerCase()}">${p.style}</span>
+                </div>
+                <div class="trip-plan-info">
+                    <h3>${p.destination}</h3>
+                    <p><i class="far fa-calendar-alt"></i> ${p.daysCount} Days Itinerary</p>
+                </div>
             </div>
-        `;
-        return;
+        `).join('');
+    } else {
+        cardsHtml = saved.map((trip, idx) => `
+            <div class="trip-plan-card" onclick="loadSavedTripByIndex(${idx})">
+                <div class="trip-plan-image-container">
+                    <img src="${trip.banner}" alt="${trip.destination}" onerror="this.src='./homepages/gallery/taj.jpg'">
+                    <span class="trip-plan-badge badge-${trip.style.toLowerCase()}">${trip.style}</span>
+                    <button class="delete-trip-btn" onclick="deleteSavedTrip(event, ${idx})">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="trip-plan-info">
+                    <h3>${trip.destination}</h3>
+                    <p><i class="far fa-calendar-alt"></i> ${trip.daysCount} Days Itinerary</p>
+                </div>
+            </div>
+        `).join('');
     }
 
-    // Render from Local Storage saved trips
     container.innerHTML = `
-        <h2>Recently Created Trip Plans</h2>
-        <div style="display: flex; justify-content: center; flex-wrap: wrap;">
-            ${saved.map((trip, idx) => `
-                <div class="trip-plan" onclick="loadSavedTripByIndex(${idx})">
-                    <img src="${trip.banner}" alt="${trip.destination}" onerror="this.src='./homepages/gallery/taj.jpg'">
-                    <p><b>${trip.daysCount} Days ${trip.style}</b> in ${trip.destination}</p>
-                </div>
-            `).join('')}
+        ${headerHtml}
+        <div class="trip-plans-grid">
+            ${cardsHtml}
         </div>
     `;
+}
+
+function clearAllSavedTrips() {
+    if (confirm("Are you sure you want to clear all your saved trip plans?")) {
+        localStorage.removeItem("saved_trips");
+        setupSavedTripsList();
+    }
+}
+
+function deleteSavedTrip(event, index) {
+    event.stopPropagation(); // prevent loading the trip when clicking delete
+    if (confirm("Are you sure you want to delete this trip plan?")) {
+        let saved = localStorage.getItem("saved_trips");
+        if (saved) {
+            saved = JSON.parse(saved);
+            saved.splice(index, 1);
+            localStorage.setItem("saved_trips", JSON.stringify(saved));
+            setupSavedTripsList();
+        }
+    }
 }
 
 // Loads a local default placeholder
